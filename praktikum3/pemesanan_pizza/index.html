@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="container-form-order-pizza">
+        <div class="title-form-box">
+            <h3 class="title-form">Black Goose Bistro Pizza-on-demand</h3>
+        </div>
+        
+        <div class="description-form">
+            <p class="description-text">Our 12" wood-fired pizzas are available for delivery. Build your custom pizza and we'll deliver it within an.</p>
+        </div>
+        
+        <div class="form-box">
+        <p>order pizza</p>
+        <form action="output.php" method="post" id="pizza-order-form">
+            <div id="name-field">
+                <label for="Name">Name : </label>
+                <input type="text" name="nama" required maxlength="4" placeholder="At Least 4 Character" id="name">
+            </div>
+            <div id="address-field">
+                <label for="address">address : </label>
+                <input type="text" name="address" required maxlength="4" placeholder="Enter Your address" id="address">
+            </div>  
+            <div id="phone-field">
+                <label for="phone">phone : </label>
+                <input type="tel" name="phone" required maxlength="4" placeholder="Enter Your Telephone" id="phone">
+            </div>
+            <div id="email-field">
+                <label for="email">email : </label>
+                <input type="text" name="email" required maxlength="4" placeholder="Enter Your Email" id="email">
+            </div>
+            <div id="delivery-instruction-field">
+                <label for="delivery-instruction">delivery instruction : </label>
+                <textarea name="delivery-instruction" id="delivery-instruction" cols="30" rows="10" minlength="10" maxlength="400" placeholder='limit Character and add placeholder text "No more than 400 Characterlong"'></textarea>
+            </div>
+            
+            <!-- specs pizza -->
+            <div id="pizza-specs">
+                <p id="pizza-specs-title">Design Your Dream Pizza:</p>
+                <span>Pizza specs</span>
+                <div id="pizza-crush-field">
+                    <p>Crust (Choose one):</p>
+                    <div id="classic-white-choice">
+                        <label for="classic-white">
+                            <input type="radio" name="pizza-crust" value="Classic White" id="classic-white"> Classic White
+                        </label>
+                    </div>
+                    <div id="multigrain-choice">
+                        <label for="multigrain">
+                            <input type="radio" name="pizza-crust" value="Multigrain" id="multigrain"> Multigrain
+                        </label>
+                    </div>
+                    <div id="cheese-stuffed-crust-choice">
+                        <label for="cheese-stuffed-crust">
+                            <input type="radio" name="pizza-crust" value="Cheese-stuffed crust" id="cheese-stuffed-crust"> Cheese-stuffed crust
+                        </label>
+                    </div>
+                    <div id="gluten-free-choice">
+                        <label for="gluten-free">
+                            <input type="radio" name="pizza-crust" value="Gluten-free" id="gluten-free"> Gluten-free
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- topping -->
+            <div id="toppings-field">
+                <p>Toppings (Choose as many as you want):</p>
+                <div id="pepperoni-choice">
+                    <label for="pepperoni">
+                        <input type="checkbox" name="toppings[]" id="pepperoni" value="Pepperoni"> Pepperoni
+                    </label>
+                </div>
+                <div id="red-sauce-choice">
+                    <label for="red-sauce">
+                        <input type="checkbox" name="toppings[]" id="red-sauce" value="Red Sauce" checked> Red Sauce
+                    </label>
+                </div>
+                <div id="white-sauce-choice">
+                    <label for="white-sauce">
+                        <input type="checkbox" name="toppings[]" id="white-sauce" value="White Sauce"> White Sauce
+                    </label>
+                </div>
+                <div id="mozzarella-cheese-choice">
+                    <label for="mozzarella-cheese">
+                        <input type="checkbox" name="toppings[]" id="mozzarella-cheese" value="Mozzarella Cheese"> Mozzarella
+                        Cheese
+                    </label>
+                </div>
+                <div id="mushrooms-choice">
+                    <label for="mushrooms">
+                        <input type="checkbox" name="toppings[]" id="mushrooms" value="Mushrooms"> Mushrooms
+                    </label>
+                </div>
+                <div id="peppers-choice">
+                    <label for="peppers">
+                        <input type="checkbox" name="toppings[]" id="peppers" value="Peppers"> Peppers
+                    </label>
+                </div>
+                <div id="anchovies-choice">
+                    <label for="anchovies">
+                        <input type="checkbox" name="toppings[]" id="anchovies" value="Anchovies"> Anchovies
+                    </label>
+                </div>
+            </div>
+            
+            <div id="quantity-field">
+                <p>Quantity</p>
+                <label for="quantity">
+                    How many pizzas: <input type="number" id="quantity" name="quantity" min="1" max="6" value="1" required>
+                </label>
+            </div>
+            
+            <div class="button-group">
+                <button type="submit" name="submit">Bring me pizza</button>
+                <button type="reset" name="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+</div>
+</html>

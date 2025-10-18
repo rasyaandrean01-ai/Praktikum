@@ -1,0 +1,55 @@
+body {
+background-color: pink !important;
+}
+/* ===== Black Goose Bistro - Output Page Design ===== */
+
+body {
+  background-color: #fff0e6; /* Warna krem lembut */
+  font-family: Verdana, Geneva, sans-serif;
+  color: #333;
+  margin: 40px;
+}
+
+/* Kotak utama di tengah */
+.container {
+  max-width: 700px;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Judul besar THANK YOU */
+h1 {
+  color: #d35400; /* Oranye khas Black Goose */
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+/* Subjudul */
+h3 {
+  color: #c0392b; /* Merah tua */
+  border-bottom: 2px solid #c0392b;
+  padding-bottom: 4px;
+  margin-top: 30px;
+}
+
+/* Paragraf umum */
+p {
+  line-height: 1.6;
+}
+
+/* Teks tebal */
+strong {
+  color: #2c3e50;
+}
+
+/* Footer kecil abu-abu */
+.footer {
+  font-size: 0.9em;
+  color: gray;
+  text-align: center;
+  margin-top: 20px;
+}

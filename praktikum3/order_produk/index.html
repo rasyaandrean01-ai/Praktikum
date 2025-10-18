@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Pemesanan Barang</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f3f3f3;
+        margin: 40px;
+    }
+    .container {
+        display: flex;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 8px rgba(0,0,0,0.2);
+        width: 800px;
+        margin: auto;
+    }
+    .left {
+        flex: 1;
+        text-align: center;
+        border-right: 1px solid #ddd;
+        padding-right: 20px;
+    }
+    .left img {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #ccc;
+        object-fit: cover;
+    }
+    .right {
+        flex: 2;
+        padding-left: 20px;
+    }
+    label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    input, select, textarea {
+        width: 100%;
+        padding: 6px;
+        margin-top: 4px;
+        box-sizing: border-box;
+    }
+    .checkbox-group {
+        margin-top: 10px;
+    }
+    .btn {
+        margin-top: 20px;
+        width: 100%;
+        background-color: green;
+        color: white;
+        border: none;
+        padding: 10px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .btn:hover {
+        background-color: darkgreen;
+    }
+</style>
+</head>
+<body>
+<h2 style="text-align:center;">Form Pemesanan Barang</h2>
+
+<div class="container">
+    <div class="left">
+        <img id="preview" src="https://via.placeholder.com/200x200?text=Preview" alt="Preview">
+        <br><br>
+        <input type="file" id="upload" accept="image/*">
+    </div>
+    <div class="right">
+        <form action="output.php" method="post">
+            <label>Title / Nama Barang:</label>
+            <input type="text" name="title" required>
+
+            <label>Description:</label>
+            <textarea name="description" rows="3"></textarea>
+
+            <label>Year:</label>
+            <input type="text" name="year">
+
+            <label>Model:</label>
+            <input type="text" name="model">
+
+            <label>Condition:</label>
+            <input type="text" name="condition">
+
+            <label>Account Holder:</label>
+            <input type="text" name="account">
+
+            <label>Bank:</label>
+            <select name="bank">
+                <option>HSBC</option>
+                <option>BCA</option>
+                <option>Mandiri</option>
+                <option>BNI</option>
+            </select>
+
+            <label>Transaction:</label>
+            <select name="transaction">
+                <option>1 Person</option>
+                <option>2 Person</option>
+                <option>3 Person</option>
+            </select>
+
+            <div class="checkbox-group">
+                <input type="checkbox" name="send_mobile" value="yes"> Send to Mobile Phone <br>
+                <input type="checkbox" name="send_email" value="yes"> Send to Email
+            </div>
+
+            <label>Send to Mobile Phone:</label>
+            <input type="text" name="mobile">
+
+            <label>Send to Email:</label>
+            <input type="email" name="email">
+
+            <button type="submit" class="btn">Generate Nabir Link</button>
+        </form>
+    </div>
+</div>
+
+<script>
+document.getElementById("upload").addEventListener("change", function(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            document.getElementById("preview").src = e.target.result;
+            localStorage.setItem("gambarProduk", e.target.result);
+        };
+        reader.readAsDataURL(file);
+    }
+});
+</script>
+</body>
+</html>
