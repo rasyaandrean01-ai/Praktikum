@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <title>Image Picker</title>
+  <style>
+    body{font-family: Arial; padding:20px}
+    .wrap{max-width:640px}
+    select{padding:8px; margin-bottom:12px}
+    img{max-width:100%; border:1px solid #ccc; padding:6px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h2>Image Picker</h2>
+    <select id="imageSelect">
+      <option value="">-- Pilih gambar --</option>
+      <option src="Bison.webp">Bison</option>
+      <option src="lion.jpg">Lion</option>
+      <option src="tiger.jpg">Tiger</option>
+    </select>
+
+    <div id="previewArea">
+      <p>Tidak ada gambar dipilih.</p>
+    </div>
+  </div>
+
+  <script src="imagepicker.js"></script>
+</body>
+</html>

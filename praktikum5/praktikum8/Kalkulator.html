@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Penjumlahan Dua Bilangan</title>
+</head>
+<body>
+
+<input type="number" id="angka1" onchange="hitung()" placeholder="Angka 1"><br><br>
++
+<br><br>
+<input type="number" id="angka2" onchange="hitung()" placeholder="Angka 2"><br><br>
+=
+<br><br>
+<input type="text" id="hasil" readonly>
+
+<script>
+function hitung() {
+    let a = parseFloat(document.getElementById("angka1").value) || 0;
+    let b = parseFloat(document.getElementById("angka2").value) || 0;
+
+    document.getElementById("hasil").value = a + b;
+}
+</script>
+
+</body>
+</html>

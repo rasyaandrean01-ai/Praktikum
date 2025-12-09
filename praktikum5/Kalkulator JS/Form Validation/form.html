@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <title>Form Validation</title>
+  <style>
+    body{font-family: Arial; padding:20px}
+    form{max-width:600px}
+    .field{margin-bottom:10px}
+    label{display:block; margin-bottom:4px}
+    input, select{padding:8px; width:100%; box-sizing:border-box}
+    .error{color:#b00020; font-size:13px; margin-top:4px}
+    .invalid { border:1px solid #b00020; }
+    #result{margin-top:16px; padding:10px; border:1px solid #4CAF50; background:#f6fffa}
+  </style>
+</head>
+<body>
+  <h2>Form Pemesanan Tiket</h2>
+  <form id="bookingForm" onsubmit="return false;">
+    <div class="field">
+      <label>Nama Pelanggan</label>
+      <input id="nama" type="text" maxlength="30" />
+      <div class="error" id="errNama"></div>
+    </div>
+
+    <div class="field">
+      <label>Email</label>
+      <input id="email" type="email" />
+      <div class="error" id="errEmail"></div>
+    </div>
+
+    <div class="field">
+      <label>Jam Keberangkatan (format HH.MM 00.00 - 23.59)</label>
+      <input id="jam" type="text" placeholder="contoh: 08.30" />
+      <div class="error" id="errJam"></div>
+    </div>
+
+    <div class="field">
+      <label>Tujuan Keberangkatan</label>
+      <input id="tujuan" type="text" />
+      <div class="error" id="errTujuan"></div>
+    </div>
+
+    <div class="field">
+      <label>Jumlah Tiket (1 - 10)</label>
+      <input id="jumlah" type="number" min="1" max="10" />
+      <div class="error" id="errJumlah"></div>
+    </div>
+
+    <button id="submitBtn">Submit</button>
+  </form>
+
+  <div id="result" style="display:none"></div>
+
+  <script src="validation.js"></script>
+</body>
+</html>
